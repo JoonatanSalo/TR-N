@@ -66,6 +66,7 @@
     <Compile Include="Assets\CharacterController2D.cs" />
     <Compile Include="Assets\DisckScript.cs" />
     <Compile Include="Assets\DisckThrow.cs" />
+    <Compile Include="Assets\DiscMelee.cs" />
     <Compile Include="Assets\Enemy.cs" />
     <Compile Include="Assets\PlayerMove.cs" />
     <Reference Include="Unity.Timeline.Editor">
