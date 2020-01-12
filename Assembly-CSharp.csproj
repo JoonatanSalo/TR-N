@@ -63,12 +63,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\CharacterController2D.cs" />
-    <Compile Include="Assets\DisckScript.cs" />
-    <Compile Include="Assets\DisckThrow.cs" />
-    <Compile Include="Assets\DiscMelee.cs" />
-    <Compile Include="Assets\Enemy.cs" />
-    <Compile Include="Assets\PlayerMove.cs" />
+    <Compile Include="Assets\Scripts\CharacterController2D.cs" />
+    <Compile Include="Assets\Scripts\DisckScript.cs" />
+    <Compile Include="Assets\Scripts\DisckThrow.cs" />
+    <Compile Include="Assets\Scripts\DiscMelee.cs" />
+    <Compile Include="Assets\Scripts\Enemy.cs" />
+    <Compile Include="Assets\Scripts\PlayerMove.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/joona/TR-N/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
