@@ -12,7 +12,6 @@ public class Enemy : MonoBehaviour
         currentHealth = maxHealth;
     }
 
-
     void Update()
     {
         
@@ -28,7 +27,6 @@ public class Enemy : MonoBehaviour
     }
 
     void Die() {
-        Debug.Log("Died");
         Destroy(gameObject);
     }
 }

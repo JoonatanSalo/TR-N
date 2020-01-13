@@ -7,21 +7,29 @@ public class DisckThrow : MonoBehaviour
     public Transform throwPoint;
     public GameObject disckPrefab;
 
-    void Start()
-    {
-        
-    }
+    public float attackRate = 2f;
+    float nextAttackTime = 0f;
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+        if (Time.time >= nextAttackTime) 
         {
-            Throw();
+            if (Input.GetKeyDown(KeyCode.Mouse0))
+            {
+                Throw();
+
+                nextAttackTime = Time.time + 1f / attackRate;
+            }
         }
     }
 
     void Throw() 
     {
         Instantiate(disckPrefab, throwPoint.position, throwPoint.rotation);
+    }
+
+    public void catchDisc()
+    {
+        nextAttackTime = Time.time;
     }
 }
