@@ -1700,7 +1700,6 @@ GameObject:
   - component: {fileID: 1873682546}
   - component: {fileID: 1873682545}
   - component: {fileID: 1873682548}
-  - component: {fileID: 1873682549}
   - component: {fileID: 1873682550}
   m_Layer: 8
   m_Name: Player
@@ -1894,30 +1893,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: faa104a5a68c57e4193b044db8169059, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  throwPoint: {fileID: 1128299102}
   disckPrefab: {fileID: 1461715457500776631, guid: 56316c7d3178dc84cb3a44452e43358c,
     type: 3}
-  attackRate: 0.2
---- !u!114 &1873682549
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1873682540}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45cac31f30d767d4b851723eb78c47c0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
   animator: {fileID: 1873682550}
   meleePoint: {fileID: 1853007162}
-  attackRange: 0.15
   destrucktableLayers:
     serializedVersion: 2
     m_Bits: 1024
+  throwPoint: {fileID: 1128299102}
+  ThrowRate: 0.5
+  hasDisc: 0
+  attackRange: 0.15
   meleeDamage: 1
-  attackRate: 2
+  MeleeAttackRate: 2
 --- !u!95 &1873682550
 Animator:
   serializedVersion: 3

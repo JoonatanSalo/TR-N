@@ -12,15 +12,16 @@ public class DiscMelee : MonoBehaviour
     public int meleeDamage = 1;
     public float attackRate = 2f;
     float nextAttackTime = 0f;
+    public bool hasDisc;
 
     void Start()
     {
-        
+        hasDisc = true;
     }
 
     void Update()
     {
-        if(Time.time >= nextAttackTime)
+        if(Time.time >= nextAttackTime && hasDisc)
         {
             if (Input.GetKeyDown(KeyCode.Mouse1))
             {
@@ -41,7 +42,9 @@ public class DiscMelee : MonoBehaviour
         {
             enemy.GetComponent<Enemy>().TakeDamage(meleeDamage);
         }
-;   }
+
+        hasDisc = false;
+    }
 
     private void OnDrawGizmosSelected()
     {
