@@ -5,8 +5,9 @@ using UnityEngine;
 public class DisckScript : MonoBehaviour
 {
     public float speed = 10f;
-    public int damage = 1;
+    public int damage = 2;
     public Rigidbody2D rb;
+
 
     void Start()
     {
@@ -30,7 +31,7 @@ public class DisckScript : MonoBehaviour
             obstacle.TakeDamage(damage);
         }
 
-        DisckThrow disc = collision.collider.GetComponent<DisckThrow>();
+        CombatScript disc = collision.collider.GetComponent<CombatScript>();
         if (disc != null)
         {
             disc.catchDisc();

@@ -24,7 +24,6 @@ public class ObstacleScript : MonoBehaviour
             if (currentHealth <= 0)
             {
                 DestroyPanel();
-
                 nextImpactTime = Time.time + 1f / maxImpactRate;
             }
         }

@@ -1,14 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class DisckThrow : MonoBehaviour
+public class CombatScript : MonoBehaviour
 {
     public GameObject disckPrefab;
     public Animator animator;
     public Transform meleePoint;
     public LayerMask destrucktableLayers;
     public Transform throwPoint;
+    public Image GUIDisc;
 
     public float ThrowRate = 2f;
     float nextThrowTime = 0f;
@@ -30,6 +32,8 @@ public class DisckThrow : MonoBehaviour
         if (Time.time >= nextThrowTime) 
         {
             hasDisc = true;
+            GUIDisc.GetComponent<guiDisc>().hasDisc = true;
+            GUIDisc.GetComponent<guiDisc>().ChangeGUIDiscSprite();
 
             if (Input.GetKeyDown(KeyCode.Mouse0))
             {
@@ -54,6 +58,8 @@ public class DisckThrow : MonoBehaviour
     {
         Instantiate(disckPrefab, throwPoint.position, throwPoint.rotation);
         hasDisc = false;
+        GUIDisc.GetComponent<guiDisc>().hasDisc = false;
+        GUIDisc.GetComponent<guiDisc>().ChangeGUIDiscSprite();
     }
 
     void Melee()
@@ -72,6 +78,8 @@ public class DisckThrow : MonoBehaviour
     {
         nextThrowTime = Time.time;
         hasDisc = true;
+        GUIDisc.GetComponent<guiDisc>().hasDisc = true;
+        GUIDisc.GetComponent<guiDisc>().ChangeGUIDiscSprite();
     }
 
     private void OnDrawGizmosSelected()

@@ -7,22 +7,25 @@ public class Enemy : MonoBehaviour
     public int maxHealth = 2;
     int currentHealth;
 
+    public float maxDamageRate = 2f;
+    float nextDamageTime = 0f;
+
     void Start()
     {
         currentHealth = maxHealth;
     }
 
-    void Update()
-    {
-        
-    }
-
     public void TakeDamage(int damage) {
-        currentHealth -= damage;
 
-        if (currentHealth <= 0)
+        if (Time.time >= nextDamageTime) 
         {
-            Die();
+            currentHealth -= damage;
+
+            if (currentHealth <= 0)
+            {
+                Die();
+                nextDamageTime = Time.time + 1f / maxDamageRate;
+            }
         }
     }
 
