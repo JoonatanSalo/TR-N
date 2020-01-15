@@ -33,6 +33,7 @@ public class PlayerHealth : MonoBehaviour
         if (Time.time >= nextDamageTime)
         {
             PlayerCurrentHealth -= damage;
+            GUIDisc.GetComponent<guiDisc>().damaged = true;
             GUIDisc.GetComponent<guiDisc>().ChangeGUIDiscSprite();
 
             if (PlayerCurrentHealth <= 0)
@@ -44,6 +45,7 @@ public class PlayerHealth : MonoBehaviour
     }
     void Die()
     {
+        GUIDisc.GetComponent<guiDisc>().isDead = true;
         GUIDisc.GetComponent<guiDisc>().ChangeGUIDiscSprite();
         Destroy(gameObject);
     }

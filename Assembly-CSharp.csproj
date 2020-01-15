@@ -63,13 +63,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\PlayerHealth.cs" />
     <Compile Include="Assets\Scripts\CharacterController2D.cs" />
     <Compile Include="Assets\Scripts\CombatScript.cs" />
     <Compile Include="Assets\Scripts\DisckScript.cs" />
     <Compile Include="Assets\Scripts\Enemy.cs" />
     <Compile Include="Assets\Scripts\guiDisc.cs" />
     <Compile Include="Assets\Scripts\ObstacleScript.cs" />
+    <Compile Include="Assets\Scripts\PlayerHealth.cs" />
     <Compile Include="Assets\Scripts\PlayerMove.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/joona/TR-N/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
