@@ -9,7 +9,8 @@ public class guiDisc : MonoBehaviour
     public Sprite GreyDisc;
     public Sprite BlueDisc;
     public Sprite DamagedDisc;
-    public Sprite WhiteDisc;
+    public Sprite DeadDisc;
+    public Sprite DamagedFadedDisc;
 
     public bool hasDisc;
     public bool damaged;
@@ -26,7 +27,7 @@ public class guiDisc : MonoBehaviour
     {
         if (isDead)
         {
-            DiscImage.sprite = WhiteDisc;
+            DiscImage.sprite = DeadDisc;
         }
         else if(hasDisc && damaged)
         {
@@ -36,9 +37,13 @@ public class guiDisc : MonoBehaviour
         {
             DiscImage.sprite = BlueDisc;
         }
+        else if (damaged && !hasDisc)
+        {
+            DiscImage.sprite = DamagedFadedDisc;
+        }
         else
         {
-            DiscImage.sprite = WhiteDisc;
+            DiscImage.sprite = GreyDisc;
         }
     }
 }
