@@ -32,6 +32,7 @@ public class CombatScript : MonoBehaviour
         if (Time.time >= nextThrowTime) 
         {
             hasDisc = true;
+            animator.SetBool("hasDisc", true);
             GUIDisc.GetComponent<guiDisc>().hasDisc = true;
             GUIDisc.GetComponent<guiDisc>().ChangeGUIDiscSprite();
 
@@ -58,6 +59,7 @@ public class CombatScript : MonoBehaviour
     {
         Instantiate(disckPrefab, throwPoint.position, throwPoint.rotation);
         hasDisc = false;
+        animator.SetBool("hasDisc", false);
         GUIDisc.GetComponent<guiDisc>().hasDisc = false;
         GUIDisc.GetComponent<guiDisc>().ChangeGUIDiscSprite();
     }
@@ -78,6 +80,7 @@ public class CombatScript : MonoBehaviour
     {
         nextThrowTime = Time.time;
         hasDisc = true;
+        animator.SetBool("hasDisc", true);
         GUIDisc.GetComponent<guiDisc>().hasDisc = true;
         GUIDisc.GetComponent<guiDisc>().ChangeGUIDiscSprite();
     }
